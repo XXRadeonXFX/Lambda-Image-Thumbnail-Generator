@@ -1,0 +1,7 @@
+docker build -t pillow-layer .
+
+
+
+docker create --name temp-pillow-layer pillow-layer 
+docker cp temp-pillow-layer:/var/task/pillow-layer.zip ./pillow-layer.zip
+docker rm temp-pillow-layer
